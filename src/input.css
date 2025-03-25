@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
-:root {
+@theme {
+  --font-primary: "Alata", sans-serif;
+  --font-secondary: "Josefin Sans", sans-serif;
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --dark-gray: hsl(0, 0%, 55%);
   --very-dark-gray: hsl(0, 0%, 41%);
 }
+
 
 .header__nav-close {
   display: none;

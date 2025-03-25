@@ -23,11 +23,6 @@
       <header
         class="relative text-white uppercase flex flex-col bg-[url(/public/images/mobile/image-hero.jpg)] lg:bg-[url(/public/images/desktop/image-hero.jpg)] p-8 bg-cover bg-center bg-no-repeat"
       >
-        <!-- <picture>
-          <source media="(min-width: 1024px)" srcset="/public/images/desktop/image-hero.jpg">
-          <img src="/public/images/mobile/image-hero.jpg" alt="Hero image" class="w-full h-auto">
-        </picture> -->
-
         <!-- Header para Móvil -->
         <div class="block lg:hidden h-screen">
           <nav class="header__nav" id="navbar" aria-label="Main Navigation">
@@ -149,20 +144,29 @@
       </header>
       <main>
         <div class="product__grid">
-          <section class="about">
-            <picture class="about__img-box">
+          <section
+            class="about px-8 py-24 flex flex-col justify-center items-center"
+          >
+            <picture class="about__img-box w-full">
               <source
                 media="(max-width: 768px)"
-                srcset="./images/mobile/image-interactive.jpg"
+                srcset="images/mobile/image-interactive.jpg"
               />
               <source
                 media="(min-width: 769px)"
-                srcset="./images/desktop/image-interactive.jpg"
+                srcset="images/desktop/image-interactive.jpg"
+              />
+              <img
+                src="images/desktop/image-interactive.jpg"
+                alt="Interactive VR Experience"
               />
             </picture>
-            <div class="about__content-box">
-              <h2 class="text-blue-600">The leader in interactive VR</h2>
-              <p>
+
+            <div class="about__content-box text-center max-w-lg p-8">
+              <h2 class="text-black uppercase py-8 text-3xl font-light">
+                The leader in interactive VR
+              </h2>
+              <p class="font-primary">
                 Founded in 2011, Loopstudios has been producing world-class
                 virtual reality projects for some of the best companies around
                 the globe. Our award-winning creations have transformed

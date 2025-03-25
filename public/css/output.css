@@ -6,23 +6,34 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-200: oklch(0.885 0.062 18.334);
-    --color-red-600: oklch(0.577 0.245 27.325);
-    --color-blue-200: oklch(0.882 0.059 254.128);
-    --color-blue-600: oklch(0.546 0.245 262.881);
+    --color-orange-600: oklch(0.646 0.222 41.116);
+    --color-green-600: oklch(0.627 0.194 149.214);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-lg: 32rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
     --tracking-widest: 0.1em;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-primary: "Alata", sans-serif;
   }
 }
 @layer base {
@@ -198,6 +209,9 @@
   .z-10 {
     z-index: 10;
   }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
   .block {
     display: block;
   }
@@ -233,6 +247,9 @@
   }
   .max-w-full {
     max-width: 100%;
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -298,68 +315,11 @@
   .border-white {
     border-color: var(--color-white);
   }
-  .bg-\[url\] {
-    background-color: url;
-  }
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-\[url\(\'\/images\/mobile\/image-hero\.jpg\'\)\] {
-    background-image: url('/images/mobile/image-hero.jpg');
-  }
-  .bg-\[url\(\'images\/mobile\/image-hero\.jpg\'\)\] {
-    background-image: url('images/mobile/image-hero.jpg');
-  }
-  .bg-\[url\(\)\] {
-    background-image: url();
-  }
-  .bg-\[url\(\.\/images\/mobile\/image-hero\.jpg\)\] {
-    background-image: url(./images/mobile/image-hero.jpg);
-  }
-  .bg-\[url\(\/\)\] {
-    background-image: url(/);
-  }
-  .bg-\[url\(\/images\/mobile\/image-hero\.jpg\)\] {
-    background-image: url(/images/mobile/image-hero.jpg);
-  }
-  .bg-\[url\(\/p\)\] {
-    background-image: url(/p);
-  }
-  .bg-\[url\(\/publi\)\] {
-    background-image: url(/publi);
-  }
-  .bg-\[url\(\/public\/\)\] {
-    background-image: url(/public/);
-  }
-  .bg-\[url\(\/public\/im\)\] {
-    background-image: url(/public/im);
-  }
-  .bg-\[url\(\/public\/images\)\] {
-    background-image: url(/public/images);
-  }
-  .bg-\[url\(\/public\/images\/\)\] {
-    background-image: url(/public/images/);
-  }
-  .bg-\[url\(\/public\/images\/mobile\)\] {
-    background-image: url(/public/images/mobile);
-  }
-  .bg-\[url\(\/public\/images\/mobile\/\)\] {
-    background-image: url(/public/images/mobile/);
-  }
-  .bg-\[url\(\/public\/images\/mobile\/image\)\] {
-    background-image: url(/public/images/mobile/image);
-  }
-  .bg-\[url\(\/public\/images\/mobile\/image-\)\] {
-    background-image: url(/public/images/mobile/image-);
-  }
-  .bg-\[url\(\/public\/images\/mobile\/image-hero\)\] {
-    background-image: url(/public/images/mobile/image-hero);
-  }
   .bg-\[url\(\/public\/images\/mobile\/image-hero\.jpg\)\] {
     background-image: url(/public/images/mobile/image-hero.jpg);
-  }
-  .bg-\[url\(images\/mobile\/image-hero\.jpg\)\] {
-    background-image: url(images/mobile/image-hero.jpg);
   }
   .bg-cover {
     background-size: cover;
@@ -379,6 +339,33 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-24 {
+    padding-block: calc(var(--spacing) * 24);
+  }
+  .py-32 {
+    padding-block: calc(var(--spacing) * 32);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-primary {
+    font-family: var(--font-primary);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -386,6 +373,22 @@
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .font-extralight {
+    --tw-font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-thin {
     --tw-font-weight: var(--font-weight-thin);
@@ -401,17 +404,11 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-blue-200 {
-    color: var(--color-blue-200);
+  .text-green-600 {
+    color: var(--color-green-600);
   }
-  .text-blue-600 {
-    color: var(--color-blue-600);
-  }
-  .text-red-200 {
-    color: var(--color-red-200);
-  }
-  .text-red-600 {
-    color: var(--color-red-600);
+  .text-orange-600 {
+    color: var(--color-orange-600);
   }
   .text-white {
     color: var(--color-white);
@@ -446,17 +443,6 @@
       background-image: url(/public/images/desktop/image-hero.jpg);
     }
   }
-  .lg\:bg-\[url\(\/public\/images\/mobile\/image-hero\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(/public/images/mobile/image-hero.jpg);
-    }
-  }
-}
-:root {
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 0%);
-  --dark-gray: hsl(0, 0%, 55%);
-  --very-dark-gray: hsl(0, 0%, 41%);
 }
 .header__nav-close {
   display: none;
