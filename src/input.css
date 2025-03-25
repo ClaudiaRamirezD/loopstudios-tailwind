@@ -1,26 +1,24 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap");
 
 :root {
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
-    --dark-gray: hsl(0, 0%, 55%);
-    --very-dark-gray: hsl(0, 0%, 41%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
 }
 
-
 .header__nav-close {
-    display: none;
+  display: none;
 }
 
 .header__nav.open .header__nav-close {
-    display: block;
+  display: block;
 }
 
 .header__nav.open .header__nav-btn {
-    display: none;
+  display: none;
 }
 
-.header__nav-backdrop{
-    font-weight: 300;
+.header__nav-backdrop {
+  font-weight: 300;
 }
