@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --font-primary: "Alata", sans-serif;
   --font-secondary: "Josefin Sans", sans-serif;
   --white: hsl(0, 0%, 100%);
@@ -24,4 +24,16 @@
 
 .header__nav-backdrop {
   font-weight: 300;
+}
+
+.product__card h3 {
+  @apply absolute bottom-5 left-5 text-white uppercase text-2xl/6 font-light tracking-widest w-32;
+}
+
+.product__card {
+  @apply relative
+}
+
+.product__card::before {
+  @apply absolute inset-0 bg-black/30 content-[""];
 }
