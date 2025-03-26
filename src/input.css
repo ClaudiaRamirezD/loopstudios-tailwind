@@ -42,12 +42,12 @@
 /* style="background-image: url('images/mobile/image-hero.jpg') */
 
 header {
-  background-image: url('/images/mobile/image-hero.jpg');
+  background-image: url('/public/images/mobile/image-hero.jpg');
 }
 
 @media (width >= 64rem) {
   header {
-    background-image: url('/images/desktop/image-hero.jpg');
+    background-image: url('/public/images/desktop/image-hero.jpg');
   }
 }
 
